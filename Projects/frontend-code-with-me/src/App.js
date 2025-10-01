@@ -64,7 +64,7 @@ function App() {
               value={formData.lastName}
               onChange={(e) => setFormData({...formData, lastName: e.target.value})}
             />
-            <button type="submit">Submit</button>
+            <button type="submit" className="ml-4 py-1 px-4 rounded text-white bg-rose-500">Submit</button>
           </form>
         )}
 
