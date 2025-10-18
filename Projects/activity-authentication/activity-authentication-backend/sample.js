@@ -67,7 +67,6 @@ passport.deserializeUser((id, done) => {
   done(null, user);
 });
 
-// Authorization middleware for admin only
 function requireAdmin(req, res, next) {
   if (req.user && req.user.role === 'admin') {
     next();
@@ -76,7 +75,6 @@ function requireAdmin(req, res, next) {
   }
 }
 
-// Authorization middleware for admin or student
 function requireAdminOrStudent(req, res, next) {
   if (req.user && (req.user.role === 'admin' || req.user.role === 'student')) {
     next();
